@@ -5,12 +5,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Farm.Classes
+namespace Farm
 {
-    class Chicken : IChicken
+    class Chicken : Animal, IChicken
     {
         private string _name;
-        public Chicken(string name, int age, int numberLegs, bool hasTail, bool canLayEgg)
+        public Chicken(string name, int age, int numberLegs, bool hasTail, bool canLayEgg) 
+            : base(name, age, numberLegs, hasTail)
         {
             Name = name;
             Age = age;
@@ -18,24 +19,6 @@ namespace Farm.Classes
             HasTail = hasTail;
             CanLayEgg = canLayEgg;
         }
-        public string Name
-        {
-            get { return _name; }
-            set
-            {
-                if (_name.Length > 12)
-                {
-                    MessageBox.Show("Name des Huhns zu lang!");
-                }
-                else
-                {
-                    _name = value;
-                }
-            }
-        }
-        public int Age { get; set; }
-        public int NumberLegs { get; set; }
-        public bool HasTail { get; set; }
         public bool CanLayEgg { get; set; }
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Farm;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,19 +13,38 @@ namespace Farm
 {
     public partial class Form1 : Form
     {
+        private List<Animal> NewFarm { get; set; }
         public Form1()
         {
+            NewFarm = SpawnAnimals();
             InitializeComponent();
+        }
+        private List<Animal> SpawnAnimals()
+        {
+            var animals = new List<Animal>();
+
+            var _rex = new Dog("Rex", 10, 4, true, false, true);
+            var _lessie = new Dog("Lessie", 8, 4, true, true, false);
+            animals.Add(_rex);
+            animals.Add(_lessie);
+
+            return animals;
+        }
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            var newFarm = this.NewFarm;
+            dataGridView1.DataSource = newFarm;
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-
+            
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
 
         }
+
     }
 }
