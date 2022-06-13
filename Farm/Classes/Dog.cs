@@ -9,8 +9,6 @@ namespace Farm
 {
     class Dog : Animal, IDog
     {
-        private string _name;
-
         public Dog(string name, int age, int numberLegs, bool hasTail, bool canBark, bool canBite) 
             :base(name, age, numberLegs, hasTail)
         {

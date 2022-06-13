@@ -9,7 +9,6 @@ namespace Farm
 {
     class Chicken : Animal, IChicken
     {
-        private string _name;
         public Chicken(string name, int age, int numberLegs, bool hasTail, bool canLayEgg) 
             : base(name, age, numberLegs, hasTail)
         {
