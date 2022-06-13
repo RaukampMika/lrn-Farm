@@ -9,8 +9,8 @@ namespace Farm
 {
     class Dog : Animal, IDog
     {
-        public Dog(string name, int age, int numberLegs, bool hasTail, bool canBark, bool canBite) 
-            :base(name, age, numberLegs, hasTail)
+        public Dog(string type, string name, int age, int numberLegs, bool hasTail, bool canBark, bool canBite, bool canLayEgg) 
+            :base(type, name, age, numberLegs, hasTail, canBark ,canBite, canLayEgg)
         {
             Name = name;
             Age = age;
@@ -18,8 +18,7 @@ namespace Farm
             HasTail = hasTail;
             CanBark = canBark;
             CanBite = canBite;
+            CanLayEgg = false;
         }
-        public bool CanBark { get; set; }
-        public bool CanBite { get; set; }
     }
 }

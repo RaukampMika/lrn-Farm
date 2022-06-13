@@ -23,14 +23,19 @@ namespace Farm
         {
             var animals = new List<Animal>();
 
-            var _rex = new Dog("Rex", 10, 4, true, false, true);
-            var _lessie = new Dog("Lessie", 8, 4, true, true, false);
+            var _rex = new Dog("Dog", "Rex", 10, 4, true, false, true, false);
+            var _lessie = new Dog("Dog", "Lessie", 8, 4, true, true, false, false);
 
-            var _inge = new Chicken("Inge", 2, 2, false, true);
+            var _inge = new Chicken("Chicken", "Inge", 2, 2, false, false, false, true);
+            var _bernd = new Chicken("Chicken", "Bernd", 3, 2, false, false, false, false);
+
+            var _roland = new Animal("Unknown", "Roland", 4, 6, false, false, false, false);
 
             animals.Add(_rex);
             animals.Add(_lessie);
             animals.Add(_inge);
+            animals.Add(_bernd);
+            animals.Add(_roland);
 
             return animals;
         }
