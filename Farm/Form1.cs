@@ -14,7 +14,6 @@ namespace Farm
     public partial class Form1 : Form
     {
         private List<Animal> NewFarm { get; set; }
-        private List<Dog> NewDog { get; set; }
         public Form1()
         {
             NewFarm = SpawnAnimals();
