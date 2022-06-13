@@ -62,15 +62,15 @@
             this.dataGridView1.Location = new System.Drawing.Point(12, 28);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(889, 357);
+            this.dataGridView1.Size = new System.Drawing.Size(851, 296);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // buttonBark
             // 
-            this.buttonBark.Location = new System.Drawing.Point(190, 404);
+            this.buttonBark.Location = new System.Drawing.Point(169, 374);
             this.buttonBark.Name = "buttonBark";
-            this.buttonBark.Size = new System.Drawing.Size(75, 23);
+            this.buttonBark.Size = new System.Drawing.Size(75, 53);
             this.buttonBark.TabIndex = 1;
             this.buttonBark.Text = "Belle!";
             this.buttonBark.UseVisualStyleBackColor = true;
@@ -78,9 +78,9 @@
             // 
             // buttonBite
             // 
-            this.buttonBite.Location = new System.Drawing.Point(419, 404);
+            this.buttonBite.Location = new System.Drawing.Point(398, 374);
             this.buttonBite.Name = "buttonBite";
-            this.buttonBite.Size = new System.Drawing.Size(75, 23);
+            this.buttonBite.Size = new System.Drawing.Size(75, 53);
             this.buttonBite.TabIndex = 2;
             this.buttonBite.Text = "Beiße!";
             this.buttonBite.UseVisualStyleBackColor = true;
@@ -88,9 +88,9 @@
             // 
             // buttonLayEgg
             // 
-            this.buttonLayEgg.Location = new System.Drawing.Point(649, 404);
+            this.buttonLayEgg.Location = new System.Drawing.Point(628, 374);
             this.buttonLayEgg.Name = "buttonLayEgg";
-            this.buttonLayEgg.Size = new System.Drawing.Size(75, 23);
+            this.buttonLayEgg.Size = new System.Drawing.Size(75, 53);
             this.buttonLayEgg.TabIndex = 3;
             this.buttonLayEgg.Text = "Leg ein Ei!";
             this.buttonLayEgg.UseVisualStyleBackColor = true;
@@ -104,7 +104,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(913, 450);
+            this.ClientSize = new System.Drawing.Size(876, 450);
             this.Controls.Add(this.buttonLayEgg);
             this.Controls.Add(this.buttonBite);
             this.Controls.Add(this.buttonBark);
