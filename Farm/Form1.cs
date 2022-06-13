@@ -44,17 +44,108 @@ namespace Farm
         {
             var newFarm = this.NewFarm;
             dataGridView1.DataSource = newFarm;
+            renameColumns();
+        }
+
+        private void renameColumns()
+        {
+            dataGridView1.Columns[0].HeaderText = "Gattung";
+            dataGridView1.Columns[1].HeaderText = "Name";
+            dataGridView1.Columns[2].HeaderText = "Alter";
+            dataGridView1.Columns[3].HeaderText = "Anzahl der Beine";
+            dataGridView1.Columns[4].HeaderText = "Hat einen Schwanz";
+            dataGridView1.Columns[5].HeaderText = "Kann bellen";
+            dataGridView1.Columns[6].HeaderText = "Kann beißen";
+            dataGridView1.Columns[7].HeaderText = "Kann Eier legen";
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            
+            try
+            {
+                var selectedRow = dataGridView1.SelectedRows[0].DataBoundItem as Animal;
+                //sMessageBox.Show("Selected Row " + selectedRow);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message + " - " + ex.Source);
+            }
         }
 
-        private void button1_Click(object sender, EventArgs e)
+
+        #region Button actions
+
+        private void buttonBark_Click(object sender, EventArgs e)
         {
-
+            try
+            {
+                var selectedRow = dataGridView1.SelectedRows[0].DataBoundItem as Animal;
+                if (selectedRow.CanBark && selectedRow.Type == "Dog")
+                {
+                    MessageBox.Show("Der Hund hat gebellt!");
+                }
+                else if (!selectedRow.CanBark && selectedRow.Type == "Dog")
+                {
+                    MessageBox.Show("Der Hund kann nicht bellen!");
+                }
+                else
+                {
+                    MessageBox.Show("Dieses Tier ist kein Hund!");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message + " - " + ex.Source);
+            }
         }
 
+        private void buttonBite_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                var selectedRow = dataGridView1.SelectedRows[0].DataBoundItem as Animal;
+                if (selectedRow.CanBite && selectedRow.Type == "Dog")
+                {
+                    MessageBox.Show("Der Hund hat gebissen!");
+                }
+                else if (!selectedRow.CanBite && selectedRow.Type == "Dog")
+                {
+                    MessageBox.Show("Dieser Hund beißt nicht!");
+                }
+                else
+                {
+                    MessageBox.Show("Diese Tier ist kein Hund!");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message + " - " + ex.Source);
+            }
+        }
+
+        private void buttonLayEgg_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                var selectedRow = dataGridView1.SelectedRows[0].DataBoundItem as Animal;
+                if (selectedRow.CanLayEgg && selectedRow.Type == "Chicken")
+                {
+                    MessageBox.Show("Das Huhn hat ein Ei gelegt!");
+                }
+                else if (!selectedRow.CanLayEgg && selectedRow.Type == "Chicken")
+                {
+                    MessageBox.Show("Dieses Huhn kann keine Eier legen!");
+                }
+                else
+                {
+                    MessageBox.Show("Diese Tier ist kein Huhn!");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message + " - " + ex.Source);
+            }
+        }
+        #endregion
     }
 }
