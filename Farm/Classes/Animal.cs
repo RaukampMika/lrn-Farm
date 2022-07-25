@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+﻿using System.Windows.Forms;
 
 namespace Farm
 {
@@ -13,7 +8,7 @@ namespace Farm
         private bool _canBark;
         private bool _canBite;
 
-        public Animal(string type, string name, int age, int numberLegs, bool hasTail, bool canBark, bool canBite, bool canLayEgg)
+        public Animal(AnimalType type, string name, int age, int numberLegs, bool hasTail, bool canBark, bool canBite, bool canLayEgg)
         {
             Type = type;
             Name = name;
@@ -24,7 +19,7 @@ namespace Farm
             CanBite = canBite;
             CanLayEgg = canLayEgg;
         }
-        public string Type { get; set; }
+        public AnimalType Type { get; set; }
         public string Name
         {
             get { return _name; }
@@ -67,5 +62,12 @@ namespace Farm
             }
         }
         public bool CanLayEgg { get; set; }
+    }
+
+    enum AnimalType
+    {
+        Dog,
+        Chicken,
+        Unknown
     }
 }

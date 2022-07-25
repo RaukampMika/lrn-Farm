@@ -1,15 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-
-namespace Farm
+﻿namespace Farm
 {
     class Chicken : Animal, IChicken
     {
-        public Chicken(string type, string name, int age, int numberLegs, bool hasTail, bool canBark, bool canBite, bool canLayEgg) 
+        public Chicken(AnimalType type, string name, int age, int numberLegs, bool hasTail, bool canBark, bool canBite, bool canLayEgg)
             : base(type, name, age, numberLegs, hasTail, canBark, canBite, canLayEgg)
         {
             Name = name;
